@@ -1,0 +1,19 @@
+#page-footer {
+    background-color: #a993bf;
+    padding: 20px;
+    color: #fff;
+}
+
+.footer-logo {
+    height: 60px;
+}
+
+.disclaimer {
+    font-size: small;
+}
+
+.social-media:hover,
+.social-media {
+    margin-right: 10px;
+    color: #fff;
+}
