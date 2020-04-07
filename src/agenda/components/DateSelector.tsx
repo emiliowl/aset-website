@@ -2,6 +2,8 @@ import React from 'react';
 
 import Button from 'react-bootstrap/Button';
 
+import getApiUrl from '../../infra/constants';
+
 interface Props {
     selectDate: ((dtSelected: string) => void);
 }
@@ -22,7 +24,7 @@ export default class DateSelector extends React.Component<Props, State> {
     }
 
     componentDidMount() {
-        fetch("http://localhost:5000/api/agendas/next-dates")
+        fetch(getApiUrl("/api/agendas/next-dates"))
         .then(res => res.json())
         .then(
             (result: Array<string>) => {

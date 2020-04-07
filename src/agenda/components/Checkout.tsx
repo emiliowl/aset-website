@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import { AgendaModel } from '../Agenda'
+import getApiUrl from '../../infra/constants';
 
 interface Customer {
     name: string,
@@ -52,7 +53,7 @@ export default class Checkout extends React.PureComponent<Props, State> {
         };
 
         const request = new Request(
-            `http://localhost:5000/api/agendas/${selectedAgenda.therapist.email}/${selectedAgenda.date.replace(/\//gi, '-')}/${selectedAgenda.time}`,
+            getApiUrl(`/api/agendas/${selectedAgenda.therapist.email}/${selectedAgenda.date.replace(/\//gi, '-')}/${selectedAgenda.time}`),
             {
                 method:  "post",
                 headers: {

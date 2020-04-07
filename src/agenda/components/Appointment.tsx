@@ -3,7 +3,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-import img from '../../img/500x500.svg';
+import getApiUrl from '../../infra/constants';
 import simoneImg from '../../common/team-img/simone.jpeg';
 import lunderImg from '../../common/team-img/lunder.jpeg';
 import amandaImg from '../../common/team-img/amanda.jpeg';
@@ -63,7 +63,7 @@ export default class Appointment extends React.Component<Props, State> {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:5000/api/agendas/for-date/${this.props.selectedDate.replace(/\//gi, '-')}`)
+        fetch(getApiUrl(`/api/agendas/for-date/${this.props.selectedDate.replace(/\//gi, '-')}`))
         .then(res => res.json())
         .then(
             (result: Array<AgendaModel>) => {
