@@ -6,6 +6,12 @@ import './App.css';
 
 const Home = lazy(() => import('./Home'));
 const Agenda = lazy(() => import('./agenda/Agenda'));
+const Barras = lazy(() => import('./specialties/Barras'));
+const Chromo = lazy(() => import('./specialties/Chromo'));
+const Floral = lazy(() => import('./specialties/Floral'));
+const Quiro = lazy(() => import('./specialties/Quiro'));
+const Radionica = lazy(() => import('./specialties/Radionica'));
+const Reiki = lazy(() => import('./specialties/Reiki'));
 
 const App = () => (
   <Router>
@@ -17,6 +23,12 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/agenda" component={Agenda} />
+        <Route exact path="/barras" component={Barras} />
+        <Route exact path="/cromoterapia" component={Chromo} />
+        <Route exact path="/floral" component={Floral} />
+        <Route exact path="/quiro" component={Quiro} />
+        <Route exact path="/mesa-radionica" component={Radionica} />
+        <Route exact path="/reiki" component={Reiki} />
         <Route component={Home} />
       </Switch>
     </Suspense>

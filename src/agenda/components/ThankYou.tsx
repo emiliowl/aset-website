@@ -4,7 +4,7 @@ export default class ThankYou extends React.PureComponent {
     render() {
         return (
             <div className="jumbotron text-center">
-                <h1 className="display-3">Obrigado!</h1>
+                <h1 className="display-3 text-nowrap">Obrigado!</h1>
                 <p className="lead">
                     <strong>Por favor, verifique seu email</strong> para mais instruções sobre seu agendamento.
                 </p>

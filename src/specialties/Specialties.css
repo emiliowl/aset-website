@@ -1,0 +1,13 @@
+.lg-padding {
+    padding-top: 2em;
+    padding-bottom: 4em;
+}
+
+.right-side-panel {
+    text-align: center;
+}
+
+.btn.aset-action {
+    background-color: #743B8C;
+    border-color: #743B8C;
+}

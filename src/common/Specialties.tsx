@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Nav from 'react-bootstrap/Nav';
+
 import img from '../img/500x500.svg';
 import imgAcupt from './specialties-img/acupuntura.jpeg';
 import imgFlora from './specialties-img/florais.jpeg';
@@ -17,7 +19,7 @@ export default class Specialties extends React.PureComponent {
                 <h2 className="featurette-heading">Especialidades</h2>
                 <div className="row row-cols-1 row-cols-md-3">
                     <div className="col mb-4">
-                        <div className="card">
+                        <div className="card clickable">
                             <img src={imgAcupt} className="card-img-top" alt="acupuntura" />
                             <div className="card-body">
                                 <h5 className="card-title">Acupuntura</h5>
@@ -33,57 +35,69 @@ export default class Specialties extends React.PureComponent {
                         </div>
                     </div>
                     <div className="col mb-4">
-                        <div className="card">
-                            <img src={imgBarras} className="card-img-top" alt="barras access" />
-                            <div className="card-body">
-                                <h5 className="card-title">Barras de Access</h5>
+                        <Nav.Link className="no-padding no-color" href="/barras">
+                            <div className="card">
+                                <img src={imgBarras} className="card-img-top" alt="barras access" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Barras de Access</h5>
+                                </div>
                             </div>
-                        </div>
+                        </Nav.Link>
                     </div>
                 </div>
                 <div className="row row-cols-1 row-cols-md-3">
                     
-                    <div className="col mb-4">
-                        <div className="card">
-                            <img src={imgCromo} className="card-img-top" alt="cromoterapia" />
-                            <div className="card-body">
-                                <h5 className="card-title">Cromoterapia</h5>
+                    <div className="col mb-4">        
+                        <Nav.Link className="no-padding no-color" href="/cromoterapia">
+                            <div className="card">
+                                <img src={imgCromo} className="card-img-top" alt="cromoterapia" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Cromoterapia</h5>
+                                </div>
                             </div>
-                        </div>
+                        </Nav.Link>
                     </div>
                     <div className="col mb-4">
-                        <div className="card">
-                            <img src={imgRadio} className="card-img-top" alt="mesa radiônica" />
-                            <div className="card-body">
-                                <h5 className="card-title">Mesa Radiônica</h5>
+                        <Nav.Link className="no-padding no-color" href="/mesa-radionica">
+                            <div className="card">
+                                <img src={imgRadio} className="card-img-top" alt="mesa radiônica" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Mesa Radiônica</h5>
+                                </div>
                             </div>
-                        </div>
+                        </Nav.Link>
                     </div>
                     <div className="col mb-4">
-                        <div className="card">
-                            <img src={imgQuiro} className="card-img-top" alt="quiropraxia" />
-                            <div className="card-body">
-                                <h5 className="card-title">Quiropraxia</h5>
+                        <Nav.Link className="no-padding no-color" href="/quiro">
+                            <div className="card">
+                                <img src={imgQuiro} className="card-img-top" alt="quiropraxia" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Quiropraxia</h5>
+                                </div>
                             </div>
-                        </div>
+                        </Nav.Link>
                     </div>
                 </div>
                 <div className="row row-cols-1 row-cols-md-3">
                     <div className="col mb-4">
-                        <div className="card">
-                            <img src={imgReiki} className="card-img-top" alt="reiki" />
-                            <div className="card-body">
-                                <h5 className="card-title">Reiki</h5>
+                        <Nav.Link className="no-padding no-color" href="/reiki">
+                            <div className="card">
+                                <img src={imgReiki} className="card-img-top" alt="reiki" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Reiki</h5>
+                                </div>
                             </div>
-                        </div>
+                        </Nav.Link>
                     </div>
                     <div className="col mb-4">
-                        <div className="card">
-                            <img src={imgFlora} className="card-img-top" alt="terapia floral" />
-                            <div className="card-body">
-                                <h5 className="card-title">Terapia Floral</h5>
+                        <Nav.Link className="no-padding no-color" href="/floral">
+                            <div className="card">
+                                <img src={imgFlora} className="card-img-top" alt="terapia floral" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Terapia Floral</h5>
+                                </div>
                             </div>
-                        </div>
+                        </Nav.Link>
                     </div>
                 </div>
             </div>

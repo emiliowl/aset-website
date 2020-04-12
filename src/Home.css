@@ -5,3 +5,16 @@
 .dropdown-item.active{
     background-color: #6e3481 !important;
 }
+
+.clickable {
+    cursor: pointer;
+}
+
+.no-color {
+    color: black !important;
+}
+
+.btn.aset-action {
+    background-color: #743B8C;
+    border-color: #743B8C;
+}

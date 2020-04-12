@@ -26,8 +26,9 @@ interface AgendaGroup {
 
 interface Props {
     selectedDate: string,
-    selectAgenda: ((agenda: AgendaModel) => void);
-    selectSpecialty: ((specialty: string) => void);
+    selectAgenda: ((agenda: AgendaModel) => void),
+    selectedSpecialty: string,
+    selectSpecialty: ((specialty: string) => void),
 }
 interface State {
     error: any,
@@ -62,8 +63,14 @@ export default class Appointment extends React.Component<Props, State> {
         return imgs[email];
     }
 
-    componentDidMount() {
-        fetch(getApiUrl(`/api/agendas/for-date/${this.props.selectedDate.replace(/\//gi, '-')}`))
+    loadAgenda(specialty?: string) {
+        let agendaUrl = `/api/agendas/for-date/${this.props.selectedDate.replace(/\//gi, '-')}`
+        
+        if(specialty) {
+            agendaUrl = `/api/agendas/for-date/${this.props.selectedDate.replace(/\//gi, '-')}/${specialty}`
+        }
+
+        fetch(getApiUrl(agendaUrl))
         .then(res => res.json())
         .then(
             (result: Array<AgendaModel>) => {
@@ -82,6 +89,10 @@ export default class Appointment extends React.Component<Props, State> {
                 });
             }
         )
+    }
+
+    componentDidMount() {
+        this.loadAgenda(this.props.selectedSpecialty);
     }
 
     therapistsGroup = ():Array<AgendaGroup> => {
@@ -104,17 +115,19 @@ export default class Appointment extends React.Component<Props, State> {
 
     renderAvailability = (agendaGroup: AgendaGroup) => {
         return (<div className="card-text">
-            { 
-                agendaGroup.agendas.map(agenda => 
-                    <Button key={agenda.time}
-                        className="spaced-1" 
-                        size="sm" 
-                        variant="outline-primary"
-                        onClick={() => this.props.selectAgenda(agenda)}>
-                        {agenda.time}
-                    </Button>
-                )
-            }
+            <div className="row">
+                { 
+                    agendaGroup.agendas.map(agenda => 
+                        <Button key={agenda.time}
+                            className="col-xs-4 spaced-1" 
+                            size="sm" 
+                            variant="outline-primary"
+                            onClick={() => this.props.selectAgenda(agenda)}>
+                            {agenda.time}
+                        </Button>
+                    )
+                }
+            </div>
         </div>);
     }
 
@@ -122,7 +135,7 @@ export default class Appointment extends React.Component<Props, State> {
         return (<div className="card-text">
             <small className="text-muted">Selecione uma especialidade:</small>
             <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Control as="select" onChange={(evt) => this.setSpecialty(evt as any)}>
+                <Form.Control as="select" onChange={(evt) => this.setSpecialty(evt as any)} value={this.props.selectedSpecialty}>
                     <option key="nao selecionado"> Selecione... </option>
                     { specialties.map(spec => <option key={spec}> {spec} </option>) }
                 </Form.Control>

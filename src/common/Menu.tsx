@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
@@ -9,7 +11,7 @@ export default class Menu extends React.PureComponent {
     render() {
         return (
             <Navbar className="aset-lightpurple-bg" variant="dark" expand="lg">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     <img
                         src={logoAset}
                         height="30"
@@ -20,9 +22,13 @@ export default class Menu extends React.PureComponent {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#especialidades">Especialidades</Nav.Link>
-                        <Nav.Link href="/agenda">Agenda</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/#especialidades">Especialidades</Nav.Link>
+                    </Nav>
+                    <Nav>
+                        <Nav.Link href="/agenda">
+                            <Button className="aset-action">Agenda</Button>
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

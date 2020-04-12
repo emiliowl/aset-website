@@ -120,12 +120,12 @@ export default class Agenda extends React.Component<Props, State> {
                                     <hr />
                                     { 
                                         this.state.steps.length === 0
-                                        && <DateSelector selectDate={this.selectDate} /> 
+                                        && <DateSelector selectDate={this.selectDate} selectSpecialty={this.selectSpecialty} selectedSpecialty={this.state.selectedSpecialty} /> 
                                     }
                                     { 
                                         this.state.steps.length === 1
                                         && this.isWorkflowActive('dateSelection')
-                                        && <Appointment selectedDate={this.state.selectedDate} selectSpecialty={this.selectSpecialty} selectAgenda={this.selectAgenda} />
+                                        && <Appointment selectedSpecialty={this.state.selectedSpecialty} selectedDate={this.state.selectedDate} selectSpecialty={this.selectSpecialty} selectAgenda={this.selectAgenda} />
                                     }
                                     { 
                                         this.state.steps.length === 2

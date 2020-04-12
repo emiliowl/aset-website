@@ -1,9 +1,11 @@
 import React from 'react';
-import logo from '../img/aset-logo-bgalpha.png';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelopeOpen, faCalendar } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
+import logo from '../img/aset-logo-bgalpha.png';
 import './Footer.css';
 
 export default class Footer extends React.PureComponent {
@@ -29,10 +31,14 @@ export default class Footer extends React.PureComponent {
 									<p>
 										<FontAwesomeIcon icon={faPhone} />&nbsp;(011) 3705-2738<br/>
 										<FontAwesomeIcon icon={faPhone} />&nbsp;(011) 98794-8205<br/>
-										<FontAwesomeIcon icon={faEnvelopeOpen} />&nbsp;e-mail aset
-									</p>
-									<p>
-										<FontAwesomeIcon icon={faCalendar} />&nbsp;Agendamento Online<br/>
+										<FontAwesomeIcon icon={faEnvelopeOpen} />&nbsp;aset.contato@gmail.com
+										<Navbar className="no-padding" color="white" variant="dark" expand="lg">
+											<Nav className="mr-auto">
+												<Nav.Link className="no-padding contato" href="/agenda">
+													<FontAwesomeIcon icon={faCalendar} />&nbsp;Agendamento Online
+												</Nav.Link>
+											</Nav>
+										</Navbar>
 									</p>
 								</div>
 							</div>

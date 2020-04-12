@@ -19,6 +19,10 @@ export default class About extends React.PureComponent {
                         <p className="text-justify">
                         Assim nasceu a ASET, um espaço terapêutico que reúne o que há de melhor em assistência, cuidados e infraestrutura, em um ambiente acolhedor e saudável para receber a todos os clientes, assim como profissionais que busquem o mesmo propósito.
                         </p>
+                        <p className="text-justify">
+                        Esperamos que você aprecie a sua visita ao nosso site e que em breve venha nos conhecer pessoalmente.
+                        </p>
+                        <p>Simone L. Tavares</p>
                     </div>
                     <div className="col-md-4 d-none d-sm-block">
                         <img className="featurette-image img-fluid mx-auto" 
@@ -38,8 +42,14 @@ export default class About extends React.PureComponent {
                                 <div className="card-body">
                                     <h5 className="card-title">Sobre a Aset Terapias</h5>
                                     <p className="card-text text-justify">
-                                    A ASET é fruto de um sonho e que após alguns anos, tornou-se real. 
-                                    Nossa proposta é ser um local para levar a você os melhores atendimentos terapêuticos, vivências, cursos de aperfeiçoamento e acima de tudo um lugar onde haja muita luz, amor e respeito.</p>
+                                        A ASET é fruto de um sonho e que após alguns anos, tornou-se real. 
+                                    </p>
+                                    <p className="card-text text-justify">
+                                        Nossa proposta é ser um local para levar a você os melhores atendimentos terapêuticos, vivências, cursos de aperfeiçoamento e acima de tudo um lugar onde haja muita luz, amor e respeito.</p>
+                                    <p className="text-justify">
+                                        Esperamos que você aprecie a sua visita ao nosso site e que em breve venha nos conhecer pessoalmente.
+                                    </p>
+                                    <p>Simone L. Tavares</p>
                                 </div>
                             </div>
                         </div>
