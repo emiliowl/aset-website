@@ -20,7 +20,8 @@ interface Appointment {
 interface Props {
     selectedAgenda: AgendaModel,
     selectedSpecialty: string,
-    finishCheckout: ((agenda: AgendaModel) => void);
+    finishCheckout: ((agenda: AgendaModel) => void),
+    onReturn: (() => void);
 }
 interface State {
     agenda: AgendaModel,
@@ -131,6 +132,9 @@ export default class Checkout extends React.PureComponent<Props, State> {
                     </Button>
                 </Form>
                 <hr />
+            </div>
+            <div className="box">
+                <Button variant="outline-secondary" size="sm" onClick={() => this.props.onReturn()}>Voltar</Button>
             </div>
         </div>);
     }

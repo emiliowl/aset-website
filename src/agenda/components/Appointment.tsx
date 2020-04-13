@@ -29,6 +29,7 @@ interface Props {
     selectAgenda: ((agenda: AgendaModel) => void),
     selectedSpecialty: string,
     selectSpecialty: ((specialty: string) => void),
+    onReturn: (() => void),
 }
 interface State {
     error: any,
@@ -172,6 +173,10 @@ export default class Appointment extends React.Component<Props, State> {
                 <p>Selecione o profissional, horário e especialidade</p>
                 <hr />
                 { this.renderSpecialties() }
+                <hr />
+                <div className="box">
+                    <Button variant="outline-secondary" size="sm" onClick={() => this.props.onReturn()}>Voltar</Button>
+                </div>
             </div>
         );
     }

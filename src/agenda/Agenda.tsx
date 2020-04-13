@@ -125,13 +125,20 @@ export default class Agenda extends React.Component<Props, State> {
                                     { 
                                         this.state.steps.length === 1
                                         && this.isWorkflowActive('dateSelection')
-                                        && <Appointment selectedSpecialty={this.state.selectedSpecialty} selectedDate={this.state.selectedDate} selectSpecialty={this.selectSpecialty} selectAgenda={this.selectAgenda} />
+                                        && <Appointment selectedSpecialty={this.state.selectedSpecialty} 
+                                                        selectedDate={this.state.selectedDate} 
+                                                        selectSpecialty={this.selectSpecialty} 
+                                                        selectAgenda={this.selectAgenda}
+                                                        onReturn={() => this.resetWorkflow()} />
                                     }
                                     { 
                                         this.state.steps.length === 2
                                         && this.isWorkflowActive('specialtySelected')
                                         && this.state.selectedAgenda !== null
-                                        && <Checkout selectedAgenda={this.state.selectedAgenda} selectedSpecialty={this.state.selectedSpecialty} finishCheckout={this.finishCheckout} />
+                                        && <Checkout selectedAgenda={this.state.selectedAgenda} 
+                                                     selectedSpecialty={this.state.selectedSpecialty} 
+                                                     finishCheckout={this.finishCheckout} 
+                                                     onReturn={() => this.resetWorkflow('dateSelection')} />
                                     }
                                     { 
                                         this.state.steps.length === 3
