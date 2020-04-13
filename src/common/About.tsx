@@ -14,13 +14,13 @@ export default class About extends React.PureComponent {
                             Nossa proposta é ser um local para levar a você os melhores atendimentos terapêuticos, vivências, cursos de aperfeiçoamento e acima de tudo um lugar onde haja muita luz, amor e respeito.
                         </p>
                         <p className="text-justify">
-                            Nossa missão é poder proporcionar a todos que nos procuram o melhor entendimento e acolhimento necessário para as questões (saúde, emocional, psicológica, etc) que possam prejudicar a evolução de cada ser como espírito e individuo único que somos. 
+                            Nossa missão é poder proporcionar a todos que nos procuram o melhor entendimento e acolhimento necessário para as questões psicoemocionais que possam prejudicar a evolução de cada ser como espírito e individuo único que somos. 
                         </p>
                         <p className="text-justify">
-                        Assim nasceu a ASET, um espaço terapêutico que reúne o que há de melhor em assistência, cuidados e infraestrutura, em um ambiente acolhedor e saudável para receber a todos os clientes, assim como profissionais que busquem o mesmo propósito.
+                            Assim nasceu a ASET, um espaço terapêutico que reúne o que há de melhor em assistência, cuidados e infraestrutura, em um ambiente acolhedor e saudável para receber a todos os clientes, assim como profissionais que busquem o mesmo propósito.
                         </p>
                         <p className="text-justify">
-                        Esperamos que você aprecie a sua visita ao nosso site e que em breve venha nos conhecer pessoalmente.
+                            Espero que você aprecie a sua visita ao nosso site e que em breve venha nos conhecer pessoalmente.
                         </p>
                         <p>Simone L. Tavares</p>
                     </div>
