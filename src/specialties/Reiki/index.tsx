@@ -7,6 +7,8 @@ import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import WhatsApp from '../../common/WhatsApp';
 
+import Team from '../../common/Team';
+
 import '../Specialties.css';
 
 export default class Reiki extends React.PureComponent {
@@ -50,7 +52,7 @@ export default class Reiki extends React.PureComponent {
                         <li>Com a redução do stress, conseguimos lidar melhor com as tensões do dia-a-dia</li>
                         <li>Alivia a dor</li>
                     </ul>
-                    
+                    <Team selectedSpecialty="Reiki" />
                 </div>
                 <div className="col-md-3 right-side-panel">
                     <Nav.Link href="/agenda">

@@ -16,7 +16,7 @@ export default class Footer extends React.PureComponent {
 					<div className="row">
 						<div className="col-sm-4">
 							<div className="widget footer-about flat_counter" data-waypoint-active="yes">
-								<p><img className="footer-logo" src={logo} alt="logo_footer"/></p>
+								<div><img className="footer-logo" src={logo} alt="logo_footer"/></div>
 								<p className="content">Nossa missão é proporcionar a todos os clientes amigos um ambiente agradável e acolhedor, onde se possa encontrar equilíbrio, maior qualidade de vida e autoconhecimento.</p>
 							</div>
 						</div>
@@ -25,10 +25,10 @@ export default class Footer extends React.PureComponent {
 								<h3 className="widget-title">Sede:</h3>
 								<hr />
 								<div className="textwidget">
-									<p>
+									<div>
 										Avenida João Ramalho, 430 - Vila Assunção - Santo André - SP
-									</p>
-									<p>
+									</div>
+									<div>
 										<FontAwesomeIcon icon={faPhone} />&nbsp;(011) 3705-2738<br/>
 										<FontAwesomeIcon icon={faPhone} />&nbsp;(011) 98794-8205<br/>
 										<FontAwesomeIcon icon={faEnvelopeOpen} />&nbsp;aset.contato@gmail.com
@@ -39,7 +39,7 @@ export default class Footer extends React.PureComponent {
 												</Nav.Link>
 											</Nav>
 										</Navbar>
-									</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -48,26 +48,24 @@ export default class Footer extends React.PureComponent {
 								<h3 className="widget-title">Redes Sociais:</h3>
 								<hr />
 								<div className="textwidget">
-									<p>
-										<a className="social-media" 
-											href="https://www.facebook.com/asetterapiasholisticas/" 
-											target="_blank" 
-											rel="noopener noreferrer">
-											<FontAwesomeIcon size="4x" icon={faFacebook} />
-										</a>
-										<a className="social-media"
-											href="https://www.instagram.com/asetterapias/" 
-											target="_blank" 
-											rel="noopener noreferrer">
-											<FontAwesomeIcon className="social-media" size="4x" icon={faInstagram} />
-										</a>
-										<a className="social-media"
-											href="https://twitter.com/ASET_Terapias" 
-											target="_blank"
-											rel="noopener noreferrer">
-											<FontAwesomeIcon className="social-media" size="4x" icon={faTwitter} />
-										</a>
-									</p>
+									<a className="social-media" 
+										href="https://www.facebook.com/asetterapiasholisticas/" 
+										target="_blank" 
+										rel="noopener noreferrer">
+										<FontAwesomeIcon size="4x" icon={faFacebook} />
+									</a>
+									<a className="social-media"
+										href="https://www.instagram.com/asetterapias/" 
+										target="_blank" 
+										rel="noopener noreferrer">
+										<FontAwesomeIcon className="social-media" size="4x" icon={faInstagram} />
+									</a>
+									<a className="social-media"
+										href="https://twitter.com/ASET_Terapias" 
+										target="_blank"
+										rel="noopener noreferrer">
+										<FontAwesomeIcon className="social-media" size="4x" icon={faTwitter} />
+									</a>
 								</div>
 							</div>
 						</div>
@@ -92,7 +90,7 @@ export default class Footer extends React.PureComponent {
 										<textarea className="form-control" placeholder="Mensagem..."></textarea>
 									</div>
 									<div className="send-wrap">
-										<button type="submit" id="submit" className="button" name="submit">Enviar</button>
+										<button type="submit" id="submit" className="button btn btn-primary" name="submit">Enviar</button>
 									</div>
 								</form>
 							</div>

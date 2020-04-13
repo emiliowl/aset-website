@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import WhatsApp from '../../common/WhatsApp';
+import Team from '../../common/Team';
 
 import '../Specialties.css';
 
@@ -50,6 +51,7 @@ export default class Floral extends React.PureComponent {
                     <p className="text-justify">
                         Cabe ressaltar ainda que a administração do floral não dispensa o acompanhamento médico, assim como a administração dos remédios prescritos pelo médico, seja alopata ou homeopata.
                     </p>
+                    <Team selectedSpecialty="Terapia Floral" />
                 </div>
                 <div className="col-md-3 right-side-panel">
                     <Nav.Link href="/agenda">

@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import WhatsApp from '../../common/WhatsApp';
+import Team from '../../common/Team';
 
 import '../Specialties.css';
 
@@ -41,6 +42,7 @@ export default class Chromo extends React.PureComponent {
                     <p className="text-justify">
                         No primeiro atendimento é realizada a avaliação, considerando a anamnese em uma visão holística, para assim dimensionar o tempo necessário de tratamento. A cada retorno é avaliada a evolução do caso e se há a necessidade de mais sessões.
                     </p>
+                    <Team selectedSpecialty="Cromoterapia" />
                 </div>
                 <div className="col-md-3 right-side-panel">
                     <Nav.Link href="/agenda">

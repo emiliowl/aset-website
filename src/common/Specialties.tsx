@@ -19,20 +19,24 @@ export default class Specialties extends React.PureComponent {
                 <h2 className="featurette-heading">Especialidades</h2>
                 <div className="row row-cols-1 row-cols-md-3">
                     <div className="col mb-4">
-                        <div className="card clickable">
-                            <img src={imgAcupt} className="card-img-top" alt="acupuntura" />
-                            <div className="card-body">
-                                <h5 className="card-title">Acupuntura</h5>
+                        <Nav.Link className="no-padding no-color" href="/acupuntura">
+                            <div className="card">
+                                <img src={imgAcupt} className="card-img-top" alt="acupuntura" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Acupuntura</h5>
+                                </div>
                             </div>
-                        </div>
+                        </Nav.Link>
                     </div>
                     <div className="col mb-4">
-                        <div className="card">
-                            <img src={imgAroma} className="card-img-top" alt="aromaterapia" />
-                            <div className="card-body">
-                                <h5 className="card-title">Aromaterapia</h5>
+                        <Nav.Link className="no-padding no-color" href="/aromaterapia">
+                            <div className="card">
+                                <img src={imgAroma} className="card-img-top" alt="aromaterapia" />
+                                <div className="card-body">
+                                    <h5 className="card-title">Aromaterapia</h5>
+                                </div>
                             </div>
-                        </div>
+                        </Nav.Link>
                     </div>
                     <div className="col mb-4">
                         <Nav.Link className="no-padding no-color" href="/barras">

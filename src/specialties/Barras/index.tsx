@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import WhatsApp from '../../common/WhatsApp';
+import Team from '../../common/Team';
 
 import '../Specialties.css';
 
@@ -30,6 +31,7 @@ export default class Barras extends React.PureComponent {
                     <p className="text-justify">
                         Barras de Access &reg; é uma técnica revolucionária, capaz de criar novas sinapses cerebrais, fazendo uma reprogramação mental, desenvolvendo paz, alívio, alegria, harmonia, alinhamento energético, empoderamento e acesso às infinitas possibilidades.
                     </p>
+                    <Team selectedSpecialty="Barras de Access" />
                 </div>
                 <div className="col-md-3 right-side-panel">
                     <Nav.Link href="/agenda">

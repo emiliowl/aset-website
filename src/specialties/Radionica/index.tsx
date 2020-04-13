@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import WhatsApp from '../../common/WhatsApp';
+import Team from '../../common/Team';
 
 import '../Specialties.css';
 
@@ -37,6 +38,7 @@ export default class Radionica extends React.PureComponent {
                     <p className="text-justify">
                         Permite o atendimento à distância, com a mesma eficácia.
                     </p>
+                    <Team selectedSpecialty="Mesa Radiônica" />
                 </div>
                 <div className="col-md-3 right-side-panel">
                     <Nav.Link href="/agenda">
