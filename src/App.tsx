@@ -16,6 +16,10 @@ const Quiro = lazy(() => import('./specialties/Quiro'));
 const Radionica = lazy(() => import('./specialties/Radionica'));
 const Reiki = lazy(() => import('./specialties/Reiki'));
 
+const Amanda = lazy(() => import('./therapists/Amanda'));
+const Lunder = lazy(() => import('./therapists/Lunder'));
+const Simone = lazy(() => import('./therapists/Simone'));
+
 const App = () => (
   <Router>
     <Suspense fallback={
@@ -35,6 +39,11 @@ const App = () => (
         <Route exact path="/quiro" component={Quiro} />
         <Route exact path="/mesa-radionica" component={Radionica} />
         <Route exact path="/reiki" component={Reiki} />
+
+        <Route exact path="/team/amanda" component={Amanda} />
+        <Route exact path="/team/lunder" component={Lunder} />
+        <Route exact path="/team/simone" component={Simone} />
+
         <Route component={Home} />
       </Switch>
     </Suspense>

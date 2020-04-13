@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Nav from 'react-bootstrap/Nav';
+
 import getApiUrl from '../infra/constants';
 
 import simoneImg from './team-img/simone.jpeg';
@@ -10,11 +12,13 @@ interface Therapist {
     name: string,
     phone: string,
     email: string,
+    slug: string,
     specialties: Array<string>
 }
 
 interface Props {
-    selectedSpecialty?: string
+    selectedSpecialty?: string,
+    viewProfile?: boolean | false
 }
 interface State {
     error: any,
@@ -84,12 +88,27 @@ export default class Team extends React.Component<Props, State> {
                         this.state.items.length > 0 &&
                         this.state.items.map(t => (
                             <div className="col mb-4" key={t.email}>
-                                <div className="card">
-                                    <img src={this.getTherapistImage(t.email)} 
-                                        className="card-img-top" 
-                                        alt={t.name} 
-                                    />
-                                </div>
+                                { 
+                                    this.props.viewProfile &&
+                                    (<div className="card">
+                                        <img src={this.getTherapistImage(t.email)} 
+                                            className="card-img-top" 
+                                            alt={t.name} 
+                                        />
+                                    </div>)
+                                }
+                                { 
+                                    !this.props.viewProfile &&
+                                    (<Nav.Link href={`/team/${t.slug}`}>
+                                        <div className="card">
+                                            <img src={this.getTherapistImage(t.email)} 
+                                                className="card-img-top" 
+                                                alt={t.name} 
+                                            />
+                                        </div>
+                                    </Nav.Link>)
+                                }
+                                
                             </div>
                         ))
                     }
