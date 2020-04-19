@@ -4,6 +4,10 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faFileMedical, faCalendarCheck } from '@fortawesome/free-solid-svg-icons';
 
+import Menu from '../common/Menu';
+import Footer from '../common/Footer';
+import WhatsApp from '../common/WhatsApp';
+
 import DateSelector from './components/DateSelector';
 import Appointment from './components/Appointment';
 import Checkout from './components/Checkout';
@@ -93,7 +97,7 @@ export default class Agenda extends React.Component<Props, State> {
         return this.state.steps.includes(step);
     }
 
-    render() {
+    renderAgenda = () => {
         const stepperClasses = 'flex-sm-fill text-sm-center nav-link';
         const agendaStepClasses = stepperClasses + ' active';
         const specialtyStepClasses = this.isWorkflowActive('dateSelection') ? stepperClasses + ' active' : stepperClasses;
@@ -153,5 +157,14 @@ export default class Agenda extends React.Component<Props, State> {
                 </div>
             </div>
         );
+    }
+
+    render() {
+        return (<React.Fragment>
+            <Menu />
+            { this.renderAgenda() }
+            <Footer />
+            <WhatsApp />
+        </React.Fragment>);
     }
 }

@@ -9,3 +9,8 @@
 .aset-lightpurple-bg {
     background-color: #a993bf;
 }
+
+.btn.aset-action {
+    background-color: #743B8C;
+    border-color: #743B8C;
+}

@@ -35,3 +35,4 @@ export default class Menu extends React.PureComponent {
         );
     }
 }
+
