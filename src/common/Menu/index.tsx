@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-import logoAset from '../img/aset-logo-bgalpha.png'
-import './Menu.css';
+import logoAset from '../../img/aset-logo-bgalpha.png'
+import './index.css';
 
 export default class Menu extends React.PureComponent {
     render() {
@@ -26,7 +26,7 @@ export default class Menu extends React.PureComponent {
                         <Nav.Link href="/#especialidades">Especialidades</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/agenda">
+                        <Nav.Link href="/calendars/default/agenda/">
                             <Button className="aset-action">Agenda</Button>
                         </Nav.Link>
                     </Nav>

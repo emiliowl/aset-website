@@ -3,14 +3,14 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-import getApiUrl from '../../infra/constants';
-import simoneImg from '../../common/team-img/simone.jpeg';
-import lunderImg from '../../common/team-img/lunder.jpeg';
-import amandaImg from '../../common/team-img/amanda.jpeg';
+import getApiUrl from '../../../infra/constants';
+import simoneImg from '../../../common/Team/team-img/simone.jpeg';
+import lunderImg from '../../../common/Team/team-img/lunder.jpeg';
+import amandaImg from '../../../common/Team/team-img/amanda.jpeg';
 
-import { AgendaModel } from '../Agenda';
+import { AgendaModel } from '../../Agenda';
 
-import './Appointment.css';
+import './index.css';
 
 interface Therapist {
     name: string,
@@ -25,6 +25,7 @@ interface AgendaGroup {
 }
 
 interface Props {
+    calendarName: string,
     selectedDate: string,
     selectAgenda: ((agenda: AgendaModel) => void),
     selectedSpecialty: string,
@@ -65,10 +66,10 @@ export default class Appointment extends React.Component<Props, State> {
     }
 
     loadAgenda(specialty?: string) {
-        let agendaUrl = `/api/agendas/for-date/${this.props.selectedDate.replace(/\//gi, '-')}`
+        let agendaUrl = `/api/calendars/${this.props.calendarName}/agendas/for-date/${this.props.selectedDate.replace(/\//gi, '-')}`
         
         if(specialty) {
-            agendaUrl = `/api/agendas/for-date/${this.props.selectedDate.replace(/\//gi, '-')}/${specialty}`
+            agendaUrl = `/api/calendars/${this.props.calendarName}/agendas/for-date/${this.props.selectedDate.replace(/\//gi, '-')}/${specialty}`
         }
 
         fetch(getApiUrl(agendaUrl))

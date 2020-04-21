@@ -45,7 +45,7 @@ export default class Chromo extends React.PureComponent {
                     <Team selectedSpecialty="Cromoterapia" />
                 </div>
                 <div className="col-md-3 right-side-panel">
-                    <Nav.Link href="/agenda">
+                    <Nav.Link href="/calendars/default/agenda/">
                         <Button size="lg"
                             className="aset-action">
                                 Agende uma avaliação!

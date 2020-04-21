@@ -3,6 +3,7 @@ import Menu from './common/Menu';
 import MainCarousel from './common/MainCarousel';
 import About from './common/About';
 import Specialties from './common/Specialties';
+import Projects from './common/Projects';
 import Team from './common/Team';
 import WhatsApp from './common/WhatsApp';
 import Footer from './common/Footer';
@@ -16,6 +17,7 @@ function Home() {
       <MainCarousel />
       <About />
       <Specialties />
+      <Projects />
       <Team />
       <Footer />
       <WhatsApp />

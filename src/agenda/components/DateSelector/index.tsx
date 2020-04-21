@@ -3,11 +3,12 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-import getApiUrl from '../../infra/constants';
+import getApiUrl from '../../../infra/constants';
 
-import './DateSelector.css';
+import './index.css';
 
 interface Props {
+    calendarName: string,
     selectedSpecialty: string,
     selectDate: ((dtSelected: string) => void),
     selectSpecialty: ((specialty: string) => void),
@@ -36,7 +37,7 @@ export default class DateSelector extends React.Component<Props, State> {
     }
 
     loadAgenda = (specialty?: string) => {
-        let targetUrl = "/api/agendas/next-dates";
+        let targetUrl = `/api/calendars/${this.props.calendarName}/agendas/next-dates`;
 
         if(specialty) targetUrl = `${targetUrl}/${specialty}`
 

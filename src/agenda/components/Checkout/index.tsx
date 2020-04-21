@@ -3,8 +3,8 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-import { AgendaModel } from '../Agenda'
-import getApiUrl from '../../infra/constants';
+import { AgendaModel } from '../../Agenda'
+import getApiUrl from '../../../infra/constants';
 
 interface Customer {
     name: string,
@@ -18,6 +18,7 @@ interface Appointment {
 }
 
 interface Props {
+    calendarName: string,
     selectedAgenda: AgendaModel,
     selectedSpecialty: string,
     finishCheckout: ((agenda: AgendaModel) => void),
@@ -54,7 +55,7 @@ export default class Checkout extends React.PureComponent<Props, State> {
         };
 
         const request = new Request(
-            getApiUrl(`/api/agendas/${selectedAgenda.therapist.email}/${selectedAgenda.date.replace(/\//gi, '-')}/${selectedAgenda.time}`),
+            getApiUrl(`/api/calendars/${this.props.calendarName}/agendas/${selectedAgenda.therapist.email}/${selectedAgenda.date.replace(/\//gi, '-')}/${selectedAgenda.time}`),
             {
                 method:  "post",
                 headers: {

@@ -2,7 +2,6 @@ import React from 'react'
 
 import Nav from 'react-bootstrap/Nav';
 
-import img from '../img/500x500.svg';
 import imgAcupt from './specialties-img/acupuntura.jpeg';
 import imgFlora from './specialties-img/florais.jpeg';
 import imgAroma from './specialties-img/aroma.jpeg';

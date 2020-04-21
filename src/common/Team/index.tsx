@@ -2,7 +2,7 @@ import React from 'react';
 
 import Nav from 'react-bootstrap/Nav';
 
-import getApiUrl from '../infra/constants';
+import getApiUrl from '../../infra/constants';
 
 import simoneImg from './team-img/simone.jpeg';
 import lunderImg from './team-img/lunder.jpeg';

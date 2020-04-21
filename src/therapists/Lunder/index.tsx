@@ -7,7 +7,7 @@ import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import WhatsApp from '../../common/WhatsApp';
 
-import imageBio from '../../common/team-img/lunder.jpeg';
+import imageBio from '../../common/Team/team-img/lunder.jpeg';
 
 import '../index.css';
 
@@ -36,7 +36,7 @@ export default class Lunder extends React.PureComponent {
                     </p>
                 </div>
                 <div className="col-md-3 right-side-panel">
-                    <Nav.Link className="w-100 no-padding" href="/agenda">
+                    <Nav.Link className="w-100 no-padding" href="/calendars/default/agenda/">
                         <Button size="lg"
                                 className="aset-action w-100">
                                 Agende uma consulta!

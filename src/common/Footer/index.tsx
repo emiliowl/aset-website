@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelopeOpen, faCalendar } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-import logo from '../img/aset-logo-bgalpha.png';
-import './Footer.css';
+import logo from '../../img/aset-logo-bgalpha.png';
+import './index.css';
 
 export default class Footer extends React.PureComponent {
     render() {

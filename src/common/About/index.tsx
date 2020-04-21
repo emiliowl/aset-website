@@ -22,6 +22,7 @@ export default class About extends React.PureComponent {
                         <p className="text-justify">
                             Espero que você aprecie a sua visita ao nosso site e que em breve venha nos conhecer pessoalmente.
                         </p>
+                        <p>Um abraço fraterno,</p>
                         <p>Simone L. Tavares</p>
                     </div>
                     <div className="col-md-4 d-none d-sm-block">
@@ -49,6 +50,7 @@ export default class About extends React.PureComponent {
                                     <p className="text-justify">
                                         Esperamos que você aprecie a sua visita ao nosso site e que em breve venha nos conhecer pessoalmente.
                                     </p>
+                                    <p>Um abraço fraterno,</p>
                                     <p>Simone L. Tavares</p>
                                 </div>
                             </div>

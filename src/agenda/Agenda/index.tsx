@@ -4,16 +4,16 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faFileMedical, faCalendarCheck } from '@fortawesome/free-solid-svg-icons';
 
-import Menu from '../common/Menu';
-import Footer from '../common/Footer';
-import WhatsApp from '../common/WhatsApp';
+import Menu from '../../common/Menu';
+import Footer from '../../common/Footer';
+import WhatsApp from '../../common/WhatsApp';
 
-import DateSelector from './components/DateSelector';
-import Appointment from './components/Appointment';
-import Checkout from './components/Checkout';
-import ThankYou from './components/ThankYou';
+import DateSelector from '../components/DateSelector';
+import Appointment from '../components/Appointment';
+import Checkout from '../components/Checkout';
+import ThankYou from '../components/ThankYou';
 
-import './Agenda.css';
+import './index.css';
 
 interface Therapist {
     name: string,
@@ -35,7 +35,13 @@ export interface AgendaModel {
     customer: Customer | null
 }
 
-interface Props {}
+interface Match{
+    params: Record<string, any>
+}
+
+interface Props {
+    match: Match
+}
 interface State {
     steps: Array<string>,
     selectedDate: string,
@@ -98,6 +104,7 @@ export default class Agenda extends React.Component<Props, State> {
     }
 
     renderAgenda = () => {
+        const { params } = this.props.match;
         const stepperClasses = 'flex-sm-fill text-sm-center nav-link';
         const agendaStepClasses = stepperClasses + ' active';
         const specialtyStepClasses = this.isWorkflowActive('dateSelection') ? stepperClasses + ' active' : stepperClasses;
@@ -124,12 +131,13 @@ export default class Agenda extends React.Component<Props, State> {
                                     <hr />
                                     { 
                                         this.state.steps.length === 0
-                                        && <DateSelector selectDate={this.selectDate} selectSpecialty={this.selectSpecialty} selectedSpecialty={this.state.selectedSpecialty} /> 
+                                        && <DateSelector calendarName={params['calendar_name']} selectDate={this.selectDate} selectSpecialty={this.selectSpecialty} selectedSpecialty={this.state.selectedSpecialty} /> 
                                     }
                                     { 
                                         this.state.steps.length === 1
                                         && this.isWorkflowActive('dateSelection')
-                                        && <Appointment selectedSpecialty={this.state.selectedSpecialty} 
+                                        && <Appointment calendarName={params['calendar_name']}
+                                                        selectedSpecialty={this.state.selectedSpecialty} 
                                                         selectedDate={this.state.selectedDate} 
                                                         selectSpecialty={this.selectSpecialty} 
                                                         selectAgenda={this.selectAgenda}
@@ -139,7 +147,8 @@ export default class Agenda extends React.Component<Props, State> {
                                         this.state.steps.length === 2
                                         && this.isWorkflowActive('specialtySelected')
                                         && this.state.selectedAgenda !== null
-                                        && <Checkout selectedAgenda={this.state.selectedAgenda} 
+                                        && <Checkout calendarName={params['calendar_name']}
+                                                     selectedAgenda={this.state.selectedAgenda} 
                                                      selectedSpecialty={this.state.selectedSpecialty} 
                                                      finishCheckout={this.finishCheckout} 
                                                      onReturn={() => this.resetWorkflow('dateSelection')} />
