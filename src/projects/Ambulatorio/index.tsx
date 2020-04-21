@@ -23,10 +23,6 @@ export default class Ambulatorio extends React.PureComponent {
                         As Práticas Integrativas e Complementares (PICS) são tratamentos que utilizam recursos terapêuticos baseados em conhecimentos tradicionais, voltados para prevenir diversas doenças e em alguns casos, também podem ser usadas como tratamentos paliativos em doenças crônicas.
                     </p>
                     <p className="text-justify">
-                        De acordo com os princípios da medicina tradicional chinesa, que fundamentam a prática da acupuntura, consiste na aplicação de agulhas em pontos específicos do corpo, mais conhecidos meridianos de acupuntura, para se obter efeitos terapêuticos.
-                        Podem ser utilizados neste processo além das agulhas, outros recursos como ventosas, moxabustão (calor proveniente da queima lã de Artemísia), eletroacupuntura, laser, auriculoterapia, massagens.
-                    </p>
-                    <p className="text-justify">
                         Evidências científicas têm mostrado os benefícios do tratamento integrado entre medicina convencional e práticas integrativas e complementares.
                     </p>
                     <p className="text-justify">
