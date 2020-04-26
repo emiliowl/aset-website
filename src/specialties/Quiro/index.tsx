@@ -26,7 +26,7 @@ export default class Quiro extends React.PureComponent {
                         A quiropraxia preocupa-se com a relação Estrutura/Função. Ela traz mais do que a melhora de uma dor, ela traz uma melhora na qualidade de vida. 
                     </p>
                     <p className="text-justify">
-                        Podemos realizar o tratamento individual ou em conjunto com outras técnicas, como acupuntura, fisioterapia, massagens, entre outros... diminuindo o tempo de recuperação e trazendo um alívio o mais rápido possível. Tudo depende de uma criteriosa avaliação e a opção da melhor técnica possível para cada caso.
+                        Podemos realizar o tratamento individual ou em conjunto com outras técnicas, como acupuntura, fisioterapia, massagens, entre outros, diminuindo o tempo de recuperação e trazendo um alívio o mais rápido possível. Tudo depende de uma criteriosa avaliação e a opção da melhor técnica possível para cada caso.
                     </p>
                     <Team selectedSpecialty="Quiropraxia" />
                 </div>

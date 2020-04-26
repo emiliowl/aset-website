@@ -90,7 +90,7 @@ export default class DateSelector extends React.Component<Props, State> {
 
     renderDates = () => {
         if(!this.state.items || this.state.items.length === 0)
-            return null;
+            return <span>Infelizmente não temos horários disponíveis, entre em contato para saber mais.</span>;
 
         let slices = [];
         let i, j = 0;

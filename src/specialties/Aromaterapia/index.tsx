@@ -27,13 +27,10 @@ export default class Aromaterapia extends React.PureComponent {
                         Estas propriedades terapêuticas ajudam a resgatar a sensação de bem-estar, agindo nas doenças do corpo físico e nos estados emocionais em desequilíbrio.
                     </p>
                     <p className="text-justify">
-                        Esta maravilhosa técnica da Medicina Tradicional Chinesa, é excelente para tratar diversos tipos de desequilíbrios, sejam eles físicos ou psicoemocionais pois sua abordagem não foca na doença e sim nos desequilíbrios de Qi, Xue e seus elementos (Agua, Madeira, Fogo, Terra, Metal).
+                        Existem muitas formas de utilização dos óleos essenciais, em sinergias exclusivas para tratar cada caso, sejam através do olfato (que levam a mensagem para o sistema límbico responsável pelas emoções) equilibrando o estado emocional, o humor e consequentemente o corpo físico, como também por meio de loções, óleos de massagem, cremes e pomadas que são absorvidas através da pele, levando a substância terapêutica para o organismo ativando processos de regeneração, equilíbrio e cura.
                     </p>
                     <p className="text-justify">
-                        Como também por meio de loções, óleos de massagem, cremes e pomadas que são absorvidas através da pele, levando a substância terapêutica para o organismo ativando processos de regeneração, equilíbrio e cura.
-                    </p>
-                    <p className="text-justify">
-                        Os óleos essenciais são concentrados e não devem ser utilizados em contato direto com a pele, por isso necessita de um profissional qualificado que saiba como utilizar as dosagens corretas para que não aconteça nenhum tipo de irritação de pele ou vias olfativas.
+                        Os óleos essenciais são concentrados e não devem ser utilizados em contato direto com a pele, por isto necessidade de um profissional qualificado, que saiba como utilizar as dosagens corretas para que não aconteça nenhum tipo de irritação de pele ou vias olfativas.
                     </p>
                     <Team selectedSpecialty="Aromaterapia" />
                 </div>

@@ -23,7 +23,7 @@ export default class Chromo extends React.PureComponent {
                         É a cura através das cores.
                     </p>
                     <p className="text-justify">
-                        O uso da cor e da luz com o propósito de equilíbrio da saúde integral é bastante antigo, foi utilizada pelas antigas civilizações, como a egípcia, a grega, a indiana, a chinesa e outras tantas que utilizaram as cores para tratamento ds saúde, equilíbrio ou alívio das doenças.
+                        O uso da cor e da luz com o propósito de equilíbrio da saúde integral é bastante antigo, foi utilizada pelas antigas civilizações, como a egípcia, a grega, a indiana, a chinesa e outras tantas que utilizaram as cores para tratamento da saúde, equilíbrio ou alívio das doenças.
                     </p>
                     <p className="text-justify">
                         A terapia com a luz solar era uma prática médica comum na Grécia (helioterapia), e também nas Américas, mesmo hoje não é difícil encontrar a cromoterapia nos protocolos médicos tradicionais, principalmente, no tratamento da icterícia através da Fototerapia (UV).

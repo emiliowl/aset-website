@@ -19,13 +19,13 @@ export default class Barras extends React.PureComponent {
                     <h1 className="display-5">
                         Barras de Access &reg;
                     </h1><hr />
-                    <p className="lead">
+                    <p className="text-justify">
                         Como seria enxergar milhões de possibilidades?
                     </p>
-                    <p className="lead">
+                    <p className="text-justify">
                         E se você percebesse o quão infinito é? 
                     </p>
-                    <p className="lead">
+                    <p className="text-justify">
                         E se pudesse criar uma nova realidade, você escolheria?
                     </p>
                     <p className="text-justify">

@@ -20,7 +20,7 @@ export default class Floral extends React.PureComponent {
                         Terapia Floral
                     </h1><hr />
                     <p className="text-justify">
-                        Florais são essências vibracionais a base de flores, que atuam no equilíbrio energético dos corpos sutis (memória energética), nos auxiliando a nos conectar com nossa essência divida, nosso verdadeiro eu, e assim, trazer para a consciência padrões comportamentais, padrões de pensamento, distúrbios emocionais, que nos distanciam de nossa verdadeira essência, de nossa missão de vida, e que precisam ser transformados.
+                        Florais são essências vibracionais a base de flores, que atuam no equilíbrio energético dos corpos sutis (memória energética), nos auxiliando a nos conectar com nossa essência divina, nosso verdadeiro eu, e assim, trazer para a consciência padrões comportamentais, padrões de pensamento, distúrbios emocionais, que nos distanciam de nossa verdadeira essência, de nossa missão de vida, e que precisam ser transformados.
                     </p>
                     <p className="text-justify">
                         A terapia floral atua em nosso campo energético vibracional, afim de reestabelecer o equilíbrio emocional, comportamental e energético, e por consequência, promove o equilíbrio do corpo físico.
@@ -29,10 +29,10 @@ export default class Floral extends React.PureComponent {
                         Por ser um tratamento natural, pode ser realizado em conjunto com tratamentos homeopáticos e alopáticos, e normalmente não possui restrições.
                     </p>
                     <p className="text-justify">
-                    Só nos tornamos livres com autoconhecimento profundo e, para isso, os florais nos ajudam de uma forma muito peculiar.
+                        Só nos tornamos livres com autoconhecimento profundo e, para isso, os florais nos ajudam de uma forma muito peculiar.
                     </p>
                     <p className="text-justify">
-                    A Cromoterapia é reconhecida pela Organização Mundial da Saúde – OMS, por ser uma terapia complementar não invasiva e outorgada pelo Ministério da Saúde do Brasil dentro da Política Nacional de Práticas Integrativas e Complementares – PNPIC no SUS e em todo território nacional.
+                        A terapia floral é reconhecida pela Organização Mundial da Saúde – OMS, por ser uma terapia complementar não invasiva e outorgada pelo Ministério da Saúde do Brasil dentro da Política Nacional de Práticas Integrativas e Complementares – PNPIC no SUS e em todo território nacional.
                     </p>
                     
                     <h4>O Tratamento Floral</h4>
