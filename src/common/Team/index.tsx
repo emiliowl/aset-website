@@ -39,8 +39,8 @@ export default class Team extends React.Component<Props, State> {
     getTherapistImage = (email: string):any => {
         const imgs: Record<string, any> = {
             'silimatavares@gmail.com': simoneImg,
-            'lunder@gmail.com': lunderImg,
-            'amanda@gmail.com': amandaImg
+            'lunder@lunder.com.br': lunderImg,
+            'amandafiasqui@gmail.com': amandaImg
         };
 
         return imgs[email];
