@@ -76,6 +76,7 @@ export default class DateSelector extends React.Component<Props, State> {
             "Quiropraxia",
             "Reiki",
             "Terapia Floral",
+            "Terapias Integradas",
         ];
         return (<div className="card-text">
             <small className="text-muted">Selecione uma especialidade:</small>
