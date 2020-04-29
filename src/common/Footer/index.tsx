@@ -240,7 +240,7 @@ export default class Footer extends React.PureComponent<any,State> {
 										<FontAwesomeIcon icon={faEnvelopeOpen} />&nbsp;aset.contato@gmail.com
 										<Navbar className="no-padding" color="white" variant="dark" expand="lg">
 											<Nav className="mr-auto">
-												<Nav.Link className="no-padding contato" href="/agenda">
+												<Nav.Link className="no-padding contato" href="/calendars/default/agenda/">
 													<FontAwesomeIcon icon={faCalendar} />&nbsp;Agendamento Online
 												</Nav.Link>
 											</Nav>

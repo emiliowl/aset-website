@@ -92,34 +92,39 @@ export default class DateSelector extends React.Component<Props, State> {
         if(!this.state.items || this.state.items.length === 0)
             return <span>Infelizmente não temos horários disponíveis, entre em contato para saber mais.</span>;
 
-        let slices = [];
-        let i, j = 0;
-        let chunk = 3;
-        for (i=0,j=this.state.items.length; i < j; i+=chunk) {
-            slices.push(this.state.items.slice(i, i+chunk));
+        const items = []
+        for(let i = 0; i < this.state.items.length; i = i+3) {
+            items.push(this.state.items.slice(i, i+3));
         }
 
         return (
-            <tbody>
-                { slices.map(slice => {
-                    return (
-                        <tr key={slices.length}>
-                            { 
-                                slice.map(dt => {
-                                    const pieces = dt.split('-');
-                                    const date = `${pieces[2]}/${pieces[1]}/${pieces[0]}`;
-
-                                    return (<td key={date}>
-                                        <Button onClick={(evt: any) => {
-                                            this.props.selectDate(date);
-                                        }}>{date}</Button>
-                                    </td>);
-                                })
-                            }
-                        </tr>
-                    );
-                }) }
-            </tbody>
+            <div>
+                { 
+                    items.map(itemList => {
+                        return (
+                            <div className="row">
+                                {
+                                    itemList.map(item => {
+                                        const dtPieces = item.split('-');
+                                        const dt = `${dtPieces[2]}/${dtPieces[1]}/${dtPieces[0]}`;
+                                        return (
+                                            <div className="col-md-4" key={dt}>
+                                                <div>
+                                                    <Button onClick={(evt: any) => {this.props.selectDate(dt);}}>
+                                                        { dt }
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
+                                <br />
+                                <br />
+                            </div>
+                        )
+                    })
+                }
+            </div>
         );
     }
 
@@ -130,11 +135,7 @@ export default class DateSelector extends React.Component<Props, State> {
                 <p>Selecione uma data para verificar a disponibilidade de profissionais...</p>
                 <hr />
                 { this.renderSpecialties() }
-                <div className="table-responsive-xl">
-                    <table className="table">
-                    { this.renderDates() }
-                    </table>
-                </div>
+                { this.renderDates() }
             </div>
         );
     }
