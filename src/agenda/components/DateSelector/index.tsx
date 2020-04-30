@@ -16,7 +16,12 @@ interface Props {
 interface State {
     error: any,
     isLoaded: boolean,
-    items: Array<string>
+    items: Array<string>,
+    therapies: Array<string>
+}
+
+interface Calendar {
+    therapies: Array<string>
 }
 
 export default class DateSelector extends React.Component<Props, State> {
@@ -25,15 +30,38 @@ export default class DateSelector extends React.Component<Props, State> {
         this.state = {
             error: null,
             isLoaded: false,
-            items: []
+            items: [],
+            therapies: [],
         };
     }
 
     setSpecialty = (event: React.FormEvent<HTMLInputElement>) => {
         const selectedSpecialty = event.currentTarget.value;
-
         this.loadAgenda(selectedSpecialty);
         this.props.selectSpecialty(selectedSpecialty);
+    }
+
+    loadCalendar = () => {
+        let targetUrl = `/api/calendars/${this.props.calendarName}`;
+
+        fetch(getApiUrl(targetUrl))
+            .then(res => res.json())
+            .then(
+                (result: Calendar) => {
+                    this.setState({
+                        therapies: result.therapies
+                    });
+                },
+                // Note: it's important to handle errors here
+                // instead of a catch() block so that we don't swallow
+                // exceptions from actual bugs in components.
+                (error) => {
+                    this.setState({
+                        therapies: [],
+                        error
+                    });
+                }
+            )
     }
 
     loadAgenda = (specialty?: string) => {
@@ -63,27 +91,18 @@ export default class DateSelector extends React.Component<Props, State> {
     }
 
     componentDidMount() {
+        this.loadCalendar();
         this.loadAgenda(this.props.selectedSpecialty);
     }
 
     renderSpecialties = () => {
-        const specialties = [
-            "Acupuntura",
-            "Aromaterapia",
-            "Barras de Access",
-            "Cromoterapia",
-            "Mesa Radiônica",
-            "Quiropraxia",
-            "Reiki",
-            "Terapia Floral",
-            "Terapias Integradas",
-        ];
+        const { therapies } = this.state;
         return (<div className="card-text">
             <small className="text-muted">Selecione uma especialidade:</small>
             <Form.Group controlId="SpecialtySelection">
                 <Form.Control as="select" onChange={(evt) => this.setSpecialty(evt as any)} value={this.props.selectedSpecialty}>
                     <option key="" value=""> Não filtrar ... </option>
-                    { specialties.map(spec => <option key={spec}> {spec} </option>) }
+                    { therapies.map(spec => <option key={spec}> {spec} </option>) }
                 </Form.Control>
             </Form.Group>
         </div>);
