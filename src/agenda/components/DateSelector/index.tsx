@@ -12,16 +12,12 @@ interface Props {
     selectedSpecialty: string,
     selectDate: ((dtSelected: string) => void),
     selectSpecialty: ((specialty: string) => void),
+    therapies: Array<string>,
 }
 interface State {
     error: any,
     isLoaded: boolean,
-    items: Array<string>,
-    therapies: Array<string>
-}
-
-interface Calendar {
-    therapies: Array<string>
+    items: Array<string>
 }
 
 export default class DateSelector extends React.Component<Props, State> {
@@ -31,7 +27,6 @@ export default class DateSelector extends React.Component<Props, State> {
             error: null,
             isLoaded: false,
             items: [],
-            therapies: [],
         };
     }
 
@@ -39,29 +34,6 @@ export default class DateSelector extends React.Component<Props, State> {
         const selectedSpecialty = event.currentTarget.value;
         this.loadAgenda(selectedSpecialty);
         this.props.selectSpecialty(selectedSpecialty);
-    }
-
-    loadCalendar = () => {
-        let targetUrl = `/api/calendars/${this.props.calendarName}`;
-
-        fetch(getApiUrl(targetUrl))
-            .then(res => res.json())
-            .then(
-                (result: Calendar) => {
-                    this.setState({
-                        therapies: result.therapies
-                    });
-                },
-                // Note: it's important to handle errors here
-                // instead of a catch() block so that we don't swallow
-                // exceptions from actual bugs in components.
-                (error) => {
-                    this.setState({
-                        therapies: [],
-                        error
-                    });
-                }
-            )
     }
 
     loadAgenda = (specialty?: string) => {
@@ -91,12 +63,11 @@ export default class DateSelector extends React.Component<Props, State> {
     }
 
     componentDidMount() {
-        this.loadCalendar();
         this.loadAgenda(this.props.selectedSpecialty);
     }
 
     renderSpecialties = () => {
-        const { therapies } = this.state;
+        const { therapies } = this.props;
         return (<div className="card-text">
             <small className="text-muted">Selecione uma especialidade:</small>
             <Form.Group controlId="SpecialtySelection">

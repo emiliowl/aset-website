@@ -33,6 +33,7 @@ interface Props {
     selectedSpecialty: string,
     selectSpecialty: ((specialty: string) => void),
     onReturn: (() => void),
+    therapies: Array<string>,
 }
 interface State {
     error: any,
@@ -137,12 +138,16 @@ export default class Appointment extends React.Component<Props, State> {
     }
 
     renderTherapistSpecialties = (specialties: Array<string>) => {
+        const { therapies } = this.props;
         return (<div className="card-text">
             <small className="text-muted">Selecione uma especialidade:</small>
             <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Control as="select" onChange={(evt) => this.setSpecialty(evt as any)} value={this.props.selectedSpecialty}>
                     <option key="nao selecionado"> Selecione... </option>
-                    { specialties.map(spec => <option key={spec}> {spec} </option>) }
+                    { 
+                        specialties.filter(s => therapies.includes(s))
+                            .map(spec => <option key={spec}> {spec} </option>) 
+                    }
                 </Form.Control>
             </Form.Group>
         </div>);

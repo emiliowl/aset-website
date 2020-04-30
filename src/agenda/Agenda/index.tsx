@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faFileMedical, faCalendarCheck } from '@fortawesome/free-solid-svg-icons';
 
+import getApiUrl from '../../infra/constants';
+
 import Menu from '../../common/Menu';
 import Footer from '../../common/Footer';
 import WhatsApp from '../../common/WhatsApp';
@@ -35,6 +37,10 @@ export interface AgendaModel {
     customer: Customer | null
 }
 
+interface Calendar {
+    therapies: Array<string>
+}
+
 interface Match{
     params: Record<string, any>
 }
@@ -46,7 +52,8 @@ interface State {
     steps: Array<string>,
     selectedDate: string,
     selectedAgenda: AgendaModel | null,
-    selectedSpecialty: string
+    selectedSpecialty: string,
+    therapies: Array<string>,
 }
 
 export default class Agenda extends React.Component<Props, State> {
@@ -56,8 +63,36 @@ export default class Agenda extends React.Component<Props, State> {
             steps: [],
             selectedDate: '',
             selectedAgenda: null,
-            selectedSpecialty: ''
+            selectedSpecialty: '',
+            therapies: [],
         };
+    }
+
+    componentDidMount() {
+        const { params } = this.props.match;
+        this.loadCalendar(params['calendar_name']);
+    }
+
+    loadCalendar = (name: string) => {
+        let targetUrl = `/api/calendars/${name}`;
+
+        fetch(getApiUrl(targetUrl))
+            .then(res => res.json())
+            .then(
+                (result: Calendar) => {
+                    this.setState({
+                        therapies: result.therapies
+                    });
+                },
+                // Note: it's important to handle errors here
+                // instead of a catch() block so that we don't swallow
+                // exceptions from actual bugs in components.
+                (error) => {
+                    this.setState({
+                        therapies: []
+                    });
+                }
+            )
     }
 
     resetWorkflow = (step?: string) => {
@@ -131,12 +166,13 @@ export default class Agenda extends React.Component<Props, State> {
                                     <hr />
                                     { 
                                         this.state.steps.length === 0
-                                        && <DateSelector calendarName={params['calendar_name']} selectDate={this.selectDate} selectSpecialty={this.selectSpecialty} selectedSpecialty={this.state.selectedSpecialty} /> 
+                                        && <DateSelector therapies={this.state.therapies} calendarName={params['calendar_name']} selectDate={this.selectDate} selectSpecialty={this.selectSpecialty} selectedSpecialty={this.state.selectedSpecialty} /> 
                                     }
                                     { 
                                         this.state.steps.length === 1
                                         && this.isWorkflowActive('dateSelection')
-                                        && <Appointment calendarName={params['calendar_name']}
+                                        && <Appointment therapies={this.state.therapies}
+                                                        calendarName={params['calendar_name']}
                                                         selectedSpecialty={this.state.selectedSpecialty} 
                                                         selectedDate={this.state.selectedDate} 
                                                         selectSpecialty={this.selectSpecialty} 
