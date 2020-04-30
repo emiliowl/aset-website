@@ -3,6 +3,8 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+import _ from 'lodash';
+
 import getApiUrl from '../../../infra/constants';
 import simoneImg from '../../../common/Team/team-img/simone.jpeg';
 import lunderImg from '../../../common/Team/team-img/lunder.jpeg';
@@ -119,15 +121,16 @@ export default class Appointment extends React.Component<Props, State> {
         return (<div className="card-text">
             <div className="row">
                 { 
-                    agendaGroup.agendas.map(agenda => 
-                        <Button key={agenda.time}
-                            className="col-xs-4 spaced-1" 
-                            size="sm" 
-                            variant="outline-primary"
-                            onClick={() => this.props.selectAgenda(agenda)}>
-                            {agenda.time}
-                        </Button>
-                    )
+                    _.orderBy(agendaGroup.agendas, a => a.time)
+                        .map(agenda => 
+                            <Button key={agenda.time}
+                                className="col-xs-4 spaced-1 w-25" 
+                                size="sm" 
+                                variant="outline-primary"
+                                onClick={() => this.props.selectAgenda(agenda)}>
+                                {agenda.time}
+                            </Button>
+                        )
                 }
             </div>
         </div>);
