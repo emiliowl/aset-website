@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Nav from 'react-bootstrap/Nav';
 import Carousel from 'react-bootstrap/Carousel';
 
 import logoCovid from './carousel-img/aset-0.jpeg';
@@ -17,10 +19,10 @@ export default class MainCarousel extends React.PureComponent {
                 <Carousel.Item>
                     <img className="d-none d-md-block w-100"
                         src={logoCovid}
-                        alt="Third slide" />
+                        alt="Aviso COVID-19" />
                     <img className="d-block d-md-none w-100"
                         src={logoCovidMobile}
-                        alt="Third slide mobile" />
+                        alt="Aviso COVID-19" />
                 </Carousel.Item>
                 {/* <Carousel.Item>
                     <a href="http://asetterapias.com.br/mesa_radionica_coletiva/" target="_blank" rel="noopener noreferrer">
@@ -33,20 +35,22 @@ export default class MainCarousel extends React.PureComponent {
                     </a>
                 </Carousel.Item> */}
                 <Carousel.Item>
-                    <img className="d-none d-md-block w-100"
-                        src={logoAmbu}
-                        alt="Third slide" />
-                    <img className="d-block d-md-none w-100"
-                        src={logoAmbuMobile}
-                        alt="Third slide mobile" />
+                    <Nav.Link className="no-padding no-color" href="/ambulatorio">
+                        <img className="d-none d-md-block w-100"
+                            src={logoAmbu}
+                            alt="Ambulatorio" />
+                        <img className="d-block d-md-none w-100"
+                            src={logoAmbuMobile}
+                            alt="Ambulatorio" />
+                    </Nav.Link>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img className="d-none d-md-block w-100"
                         src={logoHQIC}
-                        alt="Third slide" />
+                        alt="HQIC" />
                     <img className="d-block d-md-none w-100"
                         src={logoHQICMobile}
-                        alt="Third slide mobile" />
+                        alt="HQIC" />
                 </Carousel.Item>
             </Carousel>
         );
