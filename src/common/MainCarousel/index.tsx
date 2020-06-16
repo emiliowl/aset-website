@@ -11,6 +11,10 @@ import logoAmbu from './carousel-img/aset-2.jpeg';
 import logoAmbuMobile from './carousel-img/aset-2.mobile.jpeg';
 import logoHQIC from './carousel-img/aset-3.jpeg';
 import logoHQICMobile from './carousel-img/aset-3.mobile.jpeg';
+import logoReiki from './carousel-img/aset-4.jpeg';
+import logoReikiMobile from './carousel-img/aset-4.mobile.jpeg';
+import logoAroma from './carousel-img/aset-5.jpeg';
+import logoAromaMobile from './carousel-img/aset-5.mobile.jpeg';
 
 export default class MainCarousel extends React.PureComponent {
     render() {
@@ -51,6 +55,32 @@ export default class MainCarousel extends React.PureComponent {
                     <img className="d-block d-md-none w-100"
                         src={logoHQICMobile}
                         alt="HQIC" />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <a href="https://api.whatsapp.com/send?phone=+5511987948205&text=Oi,%20gostaria%20de%20falar%20sobre%20o%20curso%20de%20reiki" 
+                       className="no-padding no-color" 
+                       rel="noopener noreferrer"
+                       target="_blank" >
+                        <img className="d-none d-md-block w-100"
+                            src={logoReiki}
+                            alt="reiki" />
+                        <img className="d-block d-md-none w-100"
+                            src={logoReikiMobile}
+                            alt="reiki" />
+                    </a>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <a href="https://api.whatsapp.com/send?phone=+5511987948205&text=Oi,%20gostaria%20de%20falar%20sobre%20o%20curso%20de%20aromaterapia" 
+                       className="no-padding no-color" 
+                       rel="noopener noreferrer"
+                       target="_blank" >
+                        <img className="d-none d-md-block w-100"
+                            src={logoAroma}
+                            alt="aroma" />
+                        <img className="d-block d-md-none w-100"
+                            src={logoAromaMobile}
+                            alt="aroma" />
+                    </a>
                 </Carousel.Item>
             </Carousel>
         );
