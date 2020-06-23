@@ -1,5 +1,7 @@
 import React from 'react';
 
+import _ from 'lodash';
+
 import Nav from 'react-bootstrap/Nav';
 
 import getApiUrl from '../../infra/constants';
@@ -17,6 +19,7 @@ interface Therapist {
 }
 
 interface Props {
+    teamMembers?: Array<string>
     selectedSpecialty?: string,
     viewProfile?: boolean | false
 }
@@ -47,6 +50,7 @@ export default class Team extends React.Component<Props, State> {
     }
 
     loadTeam = (specialty?: string) => {
+        const { teamMembers } = this.props;
         let targetUrl = "/api/therapists";
 
         if(specialty) targetUrl = `${targetUrl}/for-specialty/${specialty}`
@@ -55,6 +59,14 @@ export default class Team extends React.Component<Props, State> {
             .then(res => res.json())
             .then(
                 (result: Array<Therapist>) => {
+
+                    if(teamMembers != null)
+                    {
+                        result = _.filter(
+                            result, 
+                            el => teamMembers.findIndex(email => email === el.email) !== -1);
+                    }
+
                     this.setState({
                         isLoaded: true,
                         items: result

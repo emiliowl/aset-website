@@ -10,6 +10,7 @@ const Agenda = lazy(() => import('./agenda/Agenda'));
 const Acupuntura = lazy(() => import('./specialties/Acupuntura'));
 const Ambulatorio = lazy(() => import('./projects/Ambulatorio'));
 const Aromaterapia = lazy(() => import('./specialties/Aromaterapia'));
+const AsetSocial = lazy(() => import('./projects/AsetSocial'));
 const Barras = lazy(() => import('./specialties/Barras'));
 const Chromo = lazy(() => import('./specialties/Chromo'));
 const Floral = lazy(() => import('./specialties/Floral'));
@@ -35,6 +36,7 @@ const App = () => (
         <Route exact path="/acupuntura" component={Acupuntura} />
         <Route exact path="/ambulatorio" component={Ambulatorio} />
         <Route exact path="/aromaterapia" component={Aromaterapia} />
+        <Route exact path="/asetsocial" component={AsetSocial} />
         <Route exact path="/barras" component={Barras} />
         <Route exact path="/cromoterapia" component={Chromo} />
         <Route exact path="/floral" component={Floral} />
