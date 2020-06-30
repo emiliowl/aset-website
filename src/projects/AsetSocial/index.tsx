@@ -12,7 +12,7 @@ import '../../specialties/Specialties.css';
 
 export default class AsetSocial extends React.PureComponent {
 
-    teamMembers = ['silimatavares@gmail.com', 'lunder@lunder.com.br'];
+    teamMembers = ['silimatavares@gmail.com', 'lunder@lunder.com.br', 'amandafiasqui@gmail.com'];
 
     renderBody = () => {
         return(<div className="container lg-padding">
@@ -25,7 +25,7 @@ export default class AsetSocial extends React.PureComponent {
                         O atendimento social é destinado as pessoas que possuem necessidade de atendimento terapêutico individual de adulto, infantil ou de adolescente e que não tenham condições financeiras para acessar um profissional de forma particular. 
                     </p>
                     <p className="text-justify">
-                        O nosso atendimento social terá o valor abaixo da tabela de atendimentos normais, e serão dispobinilizados somente às quartas-feiras de 9hs às 16hs.
+                        O nosso atendimento social terá o valor abaixo da tabela de atendimentos normais, e serão dispobinilizados somente às quartas-feiras de 9hs às 13hs e quintas-feiras de 14hs às 20hs.
                     </p>
                     <p className="text-justify">
                         Obs: Devido a procura poderá haver fila de espera.
