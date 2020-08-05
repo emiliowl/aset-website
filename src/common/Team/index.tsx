@@ -9,6 +9,8 @@ import getApiUrl from '../../infra/constants';
 import simoneImg from './team-img/simone.jpeg';
 import lunderImg from './team-img/lunder.jpeg';
 import amandaImg from './team-img/amanda.jpeg';
+import camillaImg from './team-img/camilla.png';
+import tatyanaImg from './team-img/tatyana.png';
 
 interface Therapist {
     name: string,
@@ -43,7 +45,9 @@ export default class Team extends React.Component<Props, State> {
         const imgs: Record<string, any> = {
             'silimatavares@gmail.com': simoneImg,
             'lunder@lunder.com.br': lunderImg,
-            'amandafiasqui@gmail.com': amandaImg
+            'amandafiasqui@gmail.com': amandaImg,
+            'camilla.oliveira@gmail.com': camillaImg,
+            'tatiana.menezes@gmail.com': tatyanaImg,
         };
 
         return imgs[email];
@@ -67,9 +71,14 @@ export default class Team extends React.Component<Props, State> {
                             el => teamMembers.findIndex(email => email === el.email) !== -1);
                     }
 
+                    const simone = _.find(result, el => el.email === "silimatavares@gmail.com");
+                    let team = _.filter(result, el => el.email !== "silimatavares@gmail.com");
+                    team = _.orderBy(team, el => el.email);
+                    if(simone) team.unshift(simone);
+
                     this.setState({
                         isLoaded: true,
-                        items: result
+                        items: team
                     });
                 },
                 // Note: it's important to handle errors here

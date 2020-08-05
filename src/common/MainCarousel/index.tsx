@@ -13,8 +13,9 @@ import logoHQIC from './carousel-img/aset-3.jpeg';
 import logoHQICMobile from './carousel-img/aset-3.mobile.jpeg';
 // import logoReiki from './carousel-img/aset-4.jpeg';
 // import logoReikiMobile from './carousel-img/aset-4.mobile.jpeg';
-import logoAroma from './carousel-img/aset-5.jpeg';
+import logoAroma from './carousel-img/aset-5.png';
 import logoAromaMobile from './carousel-img/aset-5.mobile.jpeg';
+import logoConst from './carousel-img/constelacao.png';
 
 export default class MainCarousel extends React.PureComponent {
     render() {
@@ -80,6 +81,17 @@ export default class MainCarousel extends React.PureComponent {
                         <img className="d-block d-md-none w-100"
                             src={logoAromaMobile}
                             alt="aroma" />
+                    </a>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <a href="/calendars/default/agenda/" 
+                       className="no-padding no-color">
+                        <img className="d-none d-md-block w-100"
+                            src={logoConst}
+                            alt="constelacao-familiar" />
+                        <img className="d-block d-md-none w-100"
+                            src={logoConst}
+                            alt="constelacao-familiar" />
                     </a>
                 </Carousel.Item>
             </Carousel>

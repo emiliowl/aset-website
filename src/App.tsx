@@ -17,10 +17,16 @@ const Floral = lazy(() => import('./specialties/Floral'));
 const Quiro = lazy(() => import('./specialties/Quiro'));
 const Radionica = lazy(() => import('./specialties/Radionica'));
 const Reiki = lazy(() => import('./specialties/Reiki'));
+const MapaAstral = lazy(() => import('./specialties/MapaAstral'));
+const Constelacao = lazy(() => import('./specialties/Constelacao'));
+const Meditacao = lazy(() => import('./specialties/Meditacao'));
+const TarotTerapeutico = lazy(() => import('./specialties/TarotTerapeutico'));
 
 const Amanda = lazy(() => import('./therapists/Amanda'));
+const Camilla = lazy(() => import('./therapists/Camilla'));
 const Lunder = lazy(() => import('./therapists/Lunder'));
 const Simone = lazy(() => import('./therapists/Simone'));
+const Tatyana = lazy(() => import('./therapists/Tatyana'));
 
 const App = () => (
   <Router>
@@ -43,10 +49,16 @@ const App = () => (
         <Route exact path="/quiro" component={Quiro} />
         <Route exact path="/mesa-radionica" component={Radionica} />
         <Route exact path="/reiki" component={Reiki} />
+        <Route exact path="/mapa-astral" component={MapaAstral} />
+        <Route exact path="/constelacao-familiar" component={Constelacao} />
+        <Route exact path="/meditacao" component={Meditacao} />
+        <Route exact path="/tarot-terapeutico" component={TarotTerapeutico} />
 
         <Route exact path="/team/amanda" component={Amanda} />
+        <Route exact path="/team/camilla" component={Camilla} />
         <Route exact path="/team/lunder" component={Lunder} />
         <Route exact path="/team/simone" component={Simone} />
+        <Route exact path="/team/tatyana" component={Tatyana} />
 
         <Route component={Home} />
       </Switch>
