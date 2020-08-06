@@ -35,7 +35,7 @@ export default class Simone extends React.PureComponent {
                         Graduanda do Curso de Enfermagem pela USCS, conclusão em 2020.
                     </p>
                     <p className="text-justify">
-                        E hoje com 10 anos de experiência em atendimentos, atuo com as mais diversas técnicas integrativas e complementares como Reiki, Aromaterapia, Cromoterapia, Mesas Radiônicas Quanticas.
+                        E hoje com mais de 10 anos de experiência em atendimentos, atuo com as mais diversas técnicas integrativas e complementares como Reiki, Aromaterapia, Cromoterapia, Mesas Radiônicas Quanticas.
                     </p>
                 </div>
                 <div className="col-md-3 right-side-panel">
