@@ -10,10 +10,12 @@ import imgQuiro from './specialties-img/quiro.jpeg';
 import imgBarras from './specialties-img/barras.jpeg';
 import imgCromo from './specialties-img/cromo.jpeg';
 import imgRadio from './specialties-img/radio.jpeg';
-import imgAstro from './specialties-img/astrologia.png';
-import imgConst from './specialties-img/constelacao.png';
-import imgMedit from './specialties-img/meditacao.png';
-import imgTarot from './specialties-img/tarot-terap.png';
+import imgAstro from './specialties-img/astrologia.jpeg';
+import imgConst from './specialties-img/constelacao.jpeg';
+import imgMedit from './specialties-img/meditacao.jpeg';
+import imgTarot from './specialties-img/tarot-terap.jpeg';
+
+import './index.css'
 
 export default class Specialties extends React.PureComponent {
     render() {
@@ -86,7 +88,7 @@ export default class Specialties extends React.PureComponent {
                 </div>
                 <div className="row row-cols-1 row-cols-md-3">
                     <div className="col mb-4">
-                        <Nav.Link className="no-padding no-color" href="/meditacao">
+                        <Nav.Link className="no-padding no-color" href="#">
                             <div className="card">
                                 <img src={imgMedit} className="card-img-top" alt="meditação" />
                                 <div className="card-body">
