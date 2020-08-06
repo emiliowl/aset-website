@@ -29,16 +29,6 @@ export default class MainCarousel extends React.PureComponent {
                         src={logoCovidMobile}
                         alt="Aviso COVID-19" />
                 </Carousel.Item>
-                {/* <Carousel.Item>
-                    <a href="http://asetterapias.com.br/mesa_radionica_coletiva/" target="_blank" rel="noopener noreferrer">
-                    <img className="d-none d-md-block w-100"
-                        src={logoMesa}
-                        alt="Third slide" />
-                    <img className="d-block d-md-none w-100"
-                        src={logoMesaMobile}
-                        alt="Third slide mobile" />
-                    </a>
-                </Carousel.Item> */}
                 <Carousel.Item>
                     <Nav.Link className="no-padding no-color" href="/ambulatorio">
                         <img className="d-none d-md-block w-100"
@@ -57,21 +47,8 @@ export default class MainCarousel extends React.PureComponent {
                         src={logoHQICMobile}
                         alt="HQIC" />
                 </Carousel.Item>
-                {/* <Carousel.Item>
-                    <a href="https://api.whatsapp.com/send?phone=+5511987948205&text=Oi,%20gostaria%20de%20falar%20sobre%20o%20curso%20de%20reiki" 
-                       className="no-padding no-color" 
-                       rel="noopener noreferrer"
-                       target="_blank" >
-                        <img className="d-none d-md-block w-100"
-                            src={logoReiki}
-                            alt="reiki" />
-                        <img className="d-block d-md-none w-100"
-                            src={logoReikiMobile}
-                            alt="reiki" />
-                    </a>
-                </Carousel.Item> */}
                 <Carousel.Item>
-                    <a href="https://api.whatsapp.com/send?phone=+5511987948205&text=Oi,%20gostaria%20de%20falar%20sobre%20o%20curso%20de%20aromaterapia" 
+                    <a href="http://asetterapias.com.br/jornada_aromatica_w01/" 
                        className="no-padding no-color" 
                        rel="noopener noreferrer"
                        target="_blank" >
