@@ -24,6 +24,7 @@ export default class Menu extends React.PureComponent {
                     <Nav className="mr-auto">
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/#especialidades">Especialidades</Nav.Link>
+                        <Nav.Link href="https://aroma-wiki-web.herokuapp.com">Aroma Wiki</Nav.Link>
                     </Nav>
                     <Nav>
                         <Nav.Link href="/calendars/default/agenda/">
