@@ -9,6 +9,8 @@ import getApiUrl from '../../../infra/constants';
 import simoneImg from '../../../common/Team/team-img/simone.jpeg';
 import lunderImg from '../../../common/Team/team-img/lunder.jpeg';
 import amandaImg from '../../../common/Team/team-img/amanda.jpeg';
+import camilaImg from '../../../common/Team/team-img/camilla.png';
+import tatyanImg from '../../../common/Team/team-img/tatyana.png';
 
 import { AgendaModel } from '../../Agenda';
 
@@ -62,7 +64,9 @@ export default class Appointment extends React.Component<Props, State> {
         const imgs: Record<string, any> = {
             'silimatavares@gmail.com': simoneImg,
             'lunder@lunder.com.br': lunderImg,
-            'amandafiasqui@gmail.com': amandaImg
+            'amandafiasqui@gmail.com': amandaImg,
+            'camilla.oliveira@gmail.com': camilaImg,
+            'tatiana.menezes@gmail.com': tatyanImg
         };
 
         return imgs[email];
