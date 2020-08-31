@@ -65,7 +65,7 @@ export default class Appointment extends React.Component<Props, State> {
             'silimatavares@gmail.com': simoneImg,
             'lunder@lunder.com.br': lunderImg,
             'amandafiasqui@gmail.com': amandaImg,
-            'camilla.oliveira@gmail.com': camilaImg,
+            'camilla.marquesoliveira@gmail.com': camilaImg,
             'tatiana.menezes@gmail.com': tatyanImg
         };
 

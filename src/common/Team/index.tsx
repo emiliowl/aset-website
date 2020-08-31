@@ -46,7 +46,7 @@ export default class Team extends React.Component<Props, State> {
             'silimatavares@gmail.com': simoneImg,
             'lunder@lunder.com.br': lunderImg,
             'amandafiasqui@gmail.com': amandaImg,
-            'camilla.oliveira@gmail.com': camillaImg,
+            'camilla.marquesoliveira@gmail.com': camillaImg,
             'tatiana.menezes@gmail.com': tatyanaImg,
         };
 
