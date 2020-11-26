@@ -54,7 +54,6 @@ const App = () => (
         <Route exact path="/meditacao" component={Meditacao} />
         <Route exact path="/tarot-terapeutico" component={TarotTerapeutico} />
 
-        <Route exact path="/team/amanda" component={Amanda} />
         <Route exact path="/team/camilla" component={Camilla} />
         <Route exact path="/team/lunder" component={Lunder} />
         <Route exact path="/team/simone" component={Simone} />
