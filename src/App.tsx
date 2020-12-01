@@ -21,8 +21,6 @@ const MapaAstral = lazy(() => import('./specialties/MapaAstral'));
 const Constelacao = lazy(() => import('./specialties/Constelacao'));
 const Meditacao = lazy(() => import('./specialties/Meditacao'));
 const TarotTerapeutico = lazy(() => import('./specialties/TarotTerapeutico'));
-
-const AmandaRemoveGoogle = lazy(() => import('./therapists/AmandaRemoveGoogle'));
 const Camilla = lazy(() => import('./therapists/Camilla'));
 const Lunder = lazy(() => import('./therapists/Lunder'));
 const Simone = lazy(() => import('./therapists/Simone'));
@@ -58,7 +56,6 @@ const App = () => (
         <Route exact path="/team/lunder" component={Lunder} />
         <Route exact path="/team/simone" component={Simone} />
         <Route exact path="/team/tatyana" component={Tatyana} />
-        <Route exact path="/team/amanda" component={AmandaRemoveGoogle} />
 
         <Route component={Home} />
       </Switch>
