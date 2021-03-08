@@ -102,7 +102,7 @@ export default class Team extends React.Component<Props, State> {
             <div id="especialidades" className="container">
                 <hr />
                 <h2 className="featurette-heading">Equipe</h2>
-                <h3 className="lead">Conheça nosso time de profissionais que tem você em primeiro lugar</h3>
+                <h3 className="lead">Conheça nossos especialistas</h3>
                 <div className="row row-cols-1 row-cols-md-3">
                     {
                         this.state.items &&
