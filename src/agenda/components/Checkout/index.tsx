@@ -14,7 +14,8 @@ interface Customer {
 
 interface Appointment {
     customer: Customer,
-    specialty: string
+    specialty: string,
+    text: string
 }
 
 interface Props {
@@ -34,6 +35,7 @@ export default class Checkout extends React.PureComponent<Props, State> {
     nameInput: React.RefObject<any>;
     phoneInput: React.RefObject<any>;
     emailInput: React.RefObject<any>;
+    textInput: React.RefObject<any>;
 
     constructor(props: Props) {
         super(props);
@@ -41,6 +43,7 @@ export default class Checkout extends React.PureComponent<Props, State> {
         this.nameInput = React.createRef();
         this.phoneInput = React.createRef();
         this.emailInput = React.createRef();
+        this.textInput = React.createRef();
     }
 
     submitForm = (evt :any) => {
@@ -49,6 +52,7 @@ export default class Checkout extends React.PureComponent<Props, State> {
         const { selectedAgenda } = this.props;
         let appointment :Appointment = {
             specialty: this.props.selectedSpecialty,
+            text: this.textInput.current.value,
             customer: {
                 name: this.nameInput.current.value,
                 phone: this.phoneInput.current.value,
@@ -187,6 +191,22 @@ export default class Checkout extends React.PureComponent<Props, State> {
                             this.state.errors
                             && this.state.errors['email'] 
                             && this.state.errors['email'].map(err => (<Form.Control.Feedback type="invalid">
+                                {err}
+                            </Form.Control.Feedback>)) 
+                        }
+                    </Form.Group>
+
+                    <Form.Group controlId="frmGrpText">
+                        <Form.Label>Mensagem</Form.Label>
+                        <Form.Control as="textarea" 
+                            placeholder="Digite sua mensagem..." 
+                            isValid={this.textInput.current && !this.state.errors['text']}
+                            isInvalid={false}
+                            ref={this.textInput} />
+                        { 
+                            this.state.errors
+                            && this.state.errors['text'] 
+                            && this.state.errors['text'].map(err => (<Form.Control.Feedback type="invalid">
                                 {err}
                             </Form.Control.Feedback>)) 
                         }
