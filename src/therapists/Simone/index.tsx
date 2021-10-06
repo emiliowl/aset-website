@@ -24,15 +24,19 @@ export default class Simone extends React.PureComponent {
                         Meu nome é Simone, sou fundadora da Aset Terapias Holísticas e uma eterna buscadora do autoconhecimento e apaixonada pelo cuidado.
                     </p>
                     <p className="text-justify">
-                    Minha primeira formação foi na área de exatas (Analise de sistemas), porém a busca pelo autoconhecimento e a paixão pelo cuidado me despertou o interesse em técnicas naturais para a promoção da saúde e bem-estar, assim, iniciei minha jornada por este universo fascinante!
+                        Minha primeira formação foi na área de exatas (Analise de sistemas), porém a busca pelo autoconhecimento e a paixão pelo cuidado me despertou o interesse em técnicas naturais para a promoção da saúde e bem-estar, assim, iniciei minha jornada por este universo fascinante!
                     </p>
                     <p className="text-justify">
                         Comecei meus estudos na escola de alquimia com a formação em terapia floral, sistema Joel Aleixo (2011), e paralelamente a pós-graduação em Terapias Holísticas Vibracionais (2012). 
                         Formação no curso Agentes Promotores de Saúde pela FEAL – Uniespírito com o Dr. Sergio Felipe – Médico Neurocientista, pesquisador da Pineal.
                     </p>
                     <p className="text-justify">
-                        Formação em Acupuntura pelo Ebramec / Instituto Shentao, com especialização em Beijing-China, pela federação mundial de Medicina Tradicional Chinesa – WFCMS (2018).
-                        Graduanda do Curso de Enfermagem pela USCS, conclusão em 2020.
+                        <ul>
+                            <li>Mestre Reiki</li>
+                            <li>Formação em Acupuntura pelo Ebramec / Instituto Shentao, com especialização em Beijing-China, pela federação mundial de Medicina Tradicional Chinesa – WFCMS (2018).</li>
+                            <li>Graduada em Enfermagem pela USCS.</li>
+                            <li>Cursando Pós-graduação em estomaterapia na Faculdade de Medicina do ABC.</li>
+                        </ul>
                     </p>
                     <p className="text-justify">
                         E hoje com mais de 10 anos de experiência em atendimentos, atuo com as mais diversas técnicas integrativas e complementares como Reiki, Aromaterapia, Cromoterapia, Mesas Radiônicas Quanticas.
